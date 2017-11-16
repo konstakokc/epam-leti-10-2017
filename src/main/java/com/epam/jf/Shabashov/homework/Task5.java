@@ -29,7 +29,7 @@ public class Task5 {
             vowelCounter = 0;
             consonantCounter = 0;
             for (char letter :line.toCharArray()) {
-                if (letter <= 'z'){
+                if ((letter >= 'a' && letter <='z') || (letter >= 'A' && letter <='Z')){
                     if (checkVowelLetter(letter)){
                         vowelCounter++;
                     }else{
