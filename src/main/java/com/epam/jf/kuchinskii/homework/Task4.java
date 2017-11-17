@@ -43,11 +43,11 @@ public class Task4 {
     private static long setBit(int code) {
         long res = 0;
         int position;
-        if (code < 97) {
+        if ((122 >= code) & (code >= 97)) {
             position = code % 26;
-        } else {
+        } else if ((90 >= code) & (code >= 65)) {
             position = (code % 26) + 26;
-        }
-        return res | 1 << position;
+        } else return -1;
+        return res | 1L << position;
     }
 }
